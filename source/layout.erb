@@ -3,21 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
-    <title>Websrvr Blog<%= ' - ' + current_article.title unless current_article.nil? %></title>
+    <title>Experiments in code<%= ' - ' + current_article.title unless current_article.nil? %></title>
     <link href="/stylesheets/bootstrap.min.css" rel="stylesheet" />
     <link href="/stylesheets/custom.css" rel="stylesheet" />
 
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
-  <!-- start Mixpanel --><script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
-  for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="//cdn.mxpnl.com/libs/mixpanel-2.2.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
-  mixpanel.init("05e408e0a312d873f68ba5678ccbdf2f");mixpanel.track("<%= current_page.data.title %> [<%= current_page.url %>]")</script><!-- end Mixpanel -->
   </head>
   <body>
 
     <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a href="/" class="navbar-brand">Websrvr Blog</a>
+          <a href="/" class="navbar-brand">Experiments in code</a>
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -29,8 +26,7 @@
             <li><a href="/">Home</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="http://docs.websrvr.in/">Documenation</a></li>
-            <li><a href="http://www.websrvr.in/" target="_blank">Websrvr Home</a></li>
+            <li><a href="http://www.websrvr.in/">Try Websrvr!</a></li>
           </ul>
         </div>
       </div>
@@ -51,12 +47,7 @@
         <div class="col-md-4">
           <aside>
             <h2>About</h2>
-            <p>A blog about all things websrvr.</p>
-            <p>
-              Websrvr allows you to create and host websites from your Dropbox.
-              Find out more about it at <a href='http://blog.websrvr.in/2014/09/11/hello-world/' title='Create and host websites from your dropbox.'>http://www.websrvr.in/</a>
-            </p>
-
+            <p>A blog about code experiments, mainly in golang, node and ruby.</p>
             <h2>Recent Articles</h2>
             <ul class='list-unstyled'>
               <% blog.articles[0...10].each do |article| %>
@@ -90,42 +81,12 @@
           <div class="row">
             <div class='col-md-8 text-left'>
               <p>
-                Built by
+                Blog by
                 <a href="http://twitter.com/minhajuddin">@minhajuddin</a>
-                &middot;
-                <a href="http://twitter.com/websrvr">@websrvr</a>
-                &middot;
-                <a href="http://showcase.websrvr.in/">Showcase</a>
-                <br />
-                <a href="http://www.websrvr.in/about/">About</a>
-                &middot;
-                <a href="http://www.websrvr.in/pricing/">Pricing</a>
-                &middot;
-                <a href="http://www.websrvr.in/faq/">FAQ</a>
-                &middot;
-                <a href="http://www.websrvr.in/terms/">Terms of Service</a>
-                &middot;
-                <a href="http://www.websrvr.in/privacy/">Privacy Policy</a>
-                <br />
-                <a href="http://blog.websrvr.in/">Blog</a>
-                &middot;
-                <a href="http://docs.websrvr.in/">Documentation</a>
-                &middot;
-                <a href="mailto:support@websrvr.zendesk.com?subject=%5Bwebsrvr%5D Feedback">Send feedback</a>
-                &middot;
-                <a href="mailto:support@websrvr.zendesk.com?subject=%5Bwebsrvr%5D Support">Support</a>
-                &middot;
-                <a href="http://twitter.com/share?text=I+am+using+websrvr&url=https%3A%2F%2Fapp.websrvr.in">Tweet</a>
-                &middot;
-                <a href="https://plus.google.com/share?url=https%3A%2F%2Fapp.websrvr.in">Google+</a>
-                &middot;
-                <a href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fapp.websrvr.in">Facebook</a>
-                <br />
-                &copy; 2014 Cosmicvent Software Pvt Ltd. All rights reserved.
               </p>
             </div>
             <div class='col-md-4 text-right'>
-              <a href="http://www.websrvr.in/"><img class='websrvr-badge' src="http://s3.amazonaws.com/websrvr/badges/websrvr-dark.png" alt="Powered by websrvr" title='Even this website is powered by websrvr. How cool is that?' /></a>
+              <a href="http://www.websrvr.in/"><img class='websrvr-badge' src="http://s3.amazonaws.com/websrvr/badges/websrvr-dark.png" alt="Powered by websrvr" title='Websrvr is an awesome web host, check it out!' /></a>
             </div>
           </div>
         </div>

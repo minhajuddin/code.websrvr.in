@@ -1,7 +1,7 @@
 ---
 title: Simple function throttler in golang
 date: 2014-11-04
-tags:
+tags: golang, go, rate-limit, throttle, performance, concurrency
 ---
 
 Go is fun, I love writing code in go. I am rewriting the whole backend for
@@ -12,8 +12,8 @@ get this done.
 
 
 [Play with it in Go playground](http://play.golang.org/p/WjtUP59Xps)
-~~~golang
 
+~~~golang
 package main
 
 import (
@@ -67,5 +67,4 @@ func main() {
 //Output
 //+W+W--+W+W--+W+W--+W+W--+W+W--
 //Time to finish: 5.756916ms
-
 ~~~
