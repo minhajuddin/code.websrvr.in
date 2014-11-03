@@ -87,7 +87,7 @@ set :markdown, :fenced_code_blocks => true, :smartypants => true, no_intra_empha
 
 activate :syntax, :line_numbers => true
 
-set :build_dir, '/tmp/foobargo'
+set :build_dir, '/home/minhajuddin/Dropbox/Apps/websrvr/code'
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'
