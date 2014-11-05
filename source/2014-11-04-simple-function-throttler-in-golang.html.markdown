@@ -41,6 +41,8 @@ func (t Throttler) Drain() {
 }
 
 //end of throttler
+//this is all the code you need.
+//Also remove the fmt.Print statements if you want to use this in your code
 
 func main() {
 	//creates a throttler which runs a maximum of 2 routines concurrently
